@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: antiquewhite;
+}
+.header {
+    text-align: center;
+
+}
+.message {
+    padding: 10px;
+    text-align: center;
+    border: solid black;
+    box-shadow: black;
+}
+.button_Header {
+    text-align: center;
+    gap: 15 px;
+}
+
+.information_Space {
+    padding: 10px;
+    text-align: left;
+}
+
+.information_Space .p1 {
+    text-align: left;
+
+}
+
+
+
+.footer {
+    padding-top: 1000px ;
+    text-align: center;
+}
+.footer_Buttons {
+    justify-content: center;
+    gap: 15px;
+    padding-top: 10px ;
+}
+.footer_Buttons :hover{
+    background-color: #bbb6b6;
+}
+
+.footer_Copyright {
+    padding-top: 10px;
+}
