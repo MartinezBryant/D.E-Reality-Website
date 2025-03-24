@@ -1,49 +1,261 @@
-* {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #DCE1E8;
+    color: #333;
     margin: 0;
-    padding: 5px;
-    box-sizing: border-box;
-    background-color: antiquewhite;
+    padding: 0;
 }
-.header {
-    text-align: center;
 
+.header {
+    background-color: #2C3E50;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
 }
+
+h1 {
+    margin: 0;
+}
+.header-link {
+    text-decoration: none; /* Remove underline from the link */
+    color: #fff; /* Keep text color white */
+    display: block; /* Make the link take up the entire header area */
+    text-align: center; /* Ensure text is centered */
+}
+
+/* Add hover effect to the clickable header */
+.header-link:hover {
+    background-color: #2C3E50; /* Optional: change background color on hover */
+    opacity: 0.8; /* Slight opacity change on hover for effect */
+}
+
 .message {
-    padding: 10px;
+    background-color: #AAB7C4;
+    color: #2C3E50;
     text-align: center;
-    border: solid black;
-    box-shadow: black;
+    padding: 15px;
+    font-weight: bold;
 }
-.button_Header {
-    text-align: center;
-    gap: 15 px;
+
+.button_Header, .footer_Buttons {
+    display: flex;
+    justify-content: center;
+    background-color: #374A5A;
+    padding: 10px 0;
+}
+
+.button_Header a, .footer_Buttons a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #4B5D6B;
+    padding: 10px 20px;
+    border: 2px solid #DCE1E8;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: background 0.3s ease;
+}
+
+.button_Header a:hover, .footer_Buttons a:hover {
+    background-color: #AAB7C4;
+    color: #2C3E50;
 }
 
 .information_Space {
-    padding: 10px;
-    text-align: left;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}/* Center the "View Us On The Map!" button */
+.map-button-container {
+    text-align: center; /* This will center the content inside this div */
+    margin-top: 20px;
 }
 
-.information_Space .p1 {
-    text-align: left;
-
+.map-button-container a {
+    display: inline-block; /* Make the link behave like a button */
+    background-color: #4B5D6B;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #DCE1E8;
+    transition: background 0.3s ease;
 }
 
+.map-button-container a:hover {
+    background-color: #AAB7C4;
+    color: #2C3E50;
+}
 
+.map-button-container button {
+    background-color: #4B5D6B; /* Button background color */
+    color: #fff; /* Text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
 
+.map-button-container button:hover {
+    background-color: #AAB7C4;
+    color: #2C3E50;
+}
 .footer {
-    padding-top: 1000px ;
+    background-color: #2C3E50;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.footer_Copyright p {
+    padding-top: 15px;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    text-align: center;  /* Center the content */
+    height: 400px; /* Define a height for the container */
+    overflow: hidden; /* Hide overflowing content */
+    z-index: 10;  /* Ensure it is on top of other elements */
+    background-color: transparent;  /* Remove any background color */
+}
+
+/* Hide images by default */
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;  /* Make images cover the full container height */
+    object-fit: cover;  /* Ensure the image maintains its aspect ratio */
+    border-radius: 10px; /* Add rounded corners */
+}
+
+/* Fade in/out animation */
+.fade {
+    animation: fade 10s ease-in-out infinite;
+}
+
+/* Keyframes for fading effect */
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+.contact-info {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
-.footer_Buttons {
-    justify-content: center;
-    gap: 15px;
-    padding-top: 10px ;
-}
-.footer_Buttons :hover{
-    background-color: #bbb6b6;
+
+.contact-info h2 {
+    font-size: 1.5rem;
+    color: #2C3E50;
 }
 
-.footer_Copyright {
-    padding-top: 10px;
+.contact-info p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-info a {
+    color: #4B5D6B;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #AAB7C4;
+}
+a:hover {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adds shadow to the text */
+    color: #AAB7C4; /* Optional: Change color on hover */
+}
+
+
+.about-us {
+    padding: 20px;
+    margin: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.about-us h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+}
+.homeowners-info {
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.homeowners-info h2 {
+    text-align: center;
+    color: #4B5D6B;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.homeowners-info p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.homeowners-info ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.homeowners-info ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.homeowners-info ul li strong {
+    color: #4B5D6B;
+}
+
+.homeowners-info a {
+    color: #4B5D6B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.homeowners-info a:hover {
+    color: #AAB7C4;
 }
