@@ -79,6 +79,19 @@ body {
 .button_Header a:hover {
     background-color: rgba(255,255,255,0.2);
 }
+.message {
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(45deg, #4B5D6B, #0d1f31); /* A vibrant gradient background */
+    color: white; /* Text color to contrast with the background */
+    font-family: 'Poppins', sans-serif; /* Smooth and modern font */
+    font-size: 1 px; /* Nice size for readability */
+    padding: 20px;
+    box-shadow: 12px 0px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Subtle text shadow for more contrast */
+    max-width: 100%; /* Prevents the message from stretching too wide */
+    margin: auto;
+}
 
 /* Slideshow Styling */
 .slideshow-container {
