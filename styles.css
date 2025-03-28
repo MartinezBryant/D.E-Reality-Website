@@ -1,9 +1,29 @@
-/* Global Styles */
-body {
-    font-family: 'Roboto', sans-serif;
+/* Global Reset and Box-Sizing */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Global Container Padding */
+.header, 
+.button_Header, 
+.slideshow-container, 
+.quick-services, 
+.information_Space, 
+.contact-info, 
+.map-button-container, 
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /* Enhanced Header Styling */
@@ -304,6 +324,17 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    /* Ensure no horizontal overflow */
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
     .slideshow-container {
         height: 300px;
     }
@@ -314,6 +345,7 @@ body {
 
     .quick-services {
         flex-direction: column;
+        padding: 40px 10px;
     }
 
     .service-card {
