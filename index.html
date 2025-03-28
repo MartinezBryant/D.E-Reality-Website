@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D.E Properties | Coastal Orange County Realty</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Add Font Awesome for additional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Optional: Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -28,16 +32,54 @@
         <h2>Property Management in Costa Mesa, Huntington Beach & Newport Beach, CA!</h2>
     </div>
 
-    <!-- Slideshow Container -->
+    <!-- Enhanced Slideshow Container -->
     <div class="slideshow-container">
         <div class="mySlides fade">
             <img src="images/property-image1.jpg" alt="Coastal Property 1">
+            <div class="slide-overlay">
+                <h3>Discover Your Dream Property</h3>
+                <p>Premier Real Estate Solutions in Coastal Orange County</p>
+            </div>
         </div>
         <div class="mySlides fade">
             <img src="images/property-image2.jpg" alt="Coastal Property 2">
+            <div class="slide-overlay">
+                <h3>Professional Property Management</h3>
+                <p>Trusted Services for Homeowners and Investors</p>
+            </div>
         </div>
         <div class="mySlides fade">
             <img src="images/property-image3.jpg" alt="Coastal Property 3">
+            <div class="slide-overlay">
+                <h3>Your Partner in Real Estate</h3>
+                <p>Comprehensive Property Solutions</p>
+            </div>
+        </div>
+
+        <!-- Slideshow Navigation -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <!-- New Quick Services Section -->
+    <div class="quick-services">
+        <div class="service-card">
+            <i class="fas fa-home"></i>
+            <h3>Rental Properties</h3>
+            <p>Extensive portfolio of quality rental properties</p>
+            <a href="rental.html" class="service-link">View Rentals</a>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Property Sales</h3>
+            <p>Expert guidance in buying and selling properties</p>
+            <a href="sale.html" class="service-link">Explore Sales</a>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-users"></i>
+            <h3>Property Management</h3>
+            <p>Comprehensive management for property owners</p>
+            <a href="homeowners.html" class="service-link">Learn More</a>
         </div>
     </div>
 
@@ -47,7 +89,21 @@
         <p>Currently managing residential properties in Fountain Valley, Costa Mesa, Huntington Beach, Irvine, Laguna, Newport Coast, and Newport Beach.</p>
     </div>
 
-    <!-- New Section for the Map Button -->
+    <!-- Enhanced Contact Information -->
+    <div class="contact-info">
+        <h2>Connect With Us</h2>
+        <div class="contact-details">
+            <p><i class="fas fa-phone"></i> (949) 555-1234</p>
+            <p><i class="fas fa-envelope"></i> info@deproperties.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Coastal Orange County, CA</p>
+        </div>
+        <div class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+
     <div class="map-button-container">
         <a href="https://www.google.com/maps/d/u/0/viewer?hl=en&gl=us&ie=UTF8&oe=UTF8&msa=0&ll=33.62405412692265%2C-117.881412&spn=0.205263%2C0.296975&source=embed&mid=1w1v1VOlJSYOqY5gbn7gp_8RO1vo&z=12" target="_blank">
             <button>View Us On The Map!</button>
@@ -71,5 +127,33 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Enhanced Slideshow JavaScript
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("mySlides");
+
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+
+        function changeSlide(n) {
+            slideIndex += n;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            if (slideIndex < 1) {slideIndex = slides.length}
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+
+        // Start the slideshow when the page loads
+        document.addEventListener('DOMContentLoaded', showSlides);
+    </script>
 </body>
 </html>
